@@ -1,0 +1,56 @@
+﻿@model WebApplication1.Models.prodclass
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>prodclass</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.p_classname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.p_classname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.p_display)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.p_display)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.p_playseq)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.p_playseq)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.p_status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.p_status)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

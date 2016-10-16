@@ -1,0 +1,50 @@
+﻿@model WebApplication1.Models.prodclass
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>prodclass</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.p_classname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.p_classname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.p_display)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.p_display)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.p_playseq)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.p_playseq)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.p_status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.p_status)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.p_classid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
